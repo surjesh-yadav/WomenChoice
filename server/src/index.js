@@ -18,7 +18,7 @@ import CartMobileController from "./controllers/CartController.js";
 import dbConnection from "./configs/db.js";
 
 app.use("/auth", UserController);
-app.use("/jeans", JeansController);
+app.use("/jeans", JeansController); 
 app.use("/kurtis", KurtiController);
 app.use("/tops", TopController);
 app.use("/cart", CartMobileController);
@@ -26,7 +26,7 @@ app.use("/cart", CartMobileController);
 app.listen(port, async (req, res) => {
   try {
     await dbConnection();
-    console.log("listening on port 2345");
+    console.log("listening on port 4001");
   } catch (e) {
     res.send(e);
   }
